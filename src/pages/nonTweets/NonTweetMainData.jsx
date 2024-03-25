@@ -22,7 +22,7 @@ export default function NonTweetMainData(props) {
 
         </a>
 
-      <Buttons id={item._id} />
+        { /* <Buttons id={item._id} /> */}
       </div>
     </div>
   )

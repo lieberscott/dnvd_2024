@@ -23,7 +23,7 @@ const App = () => (
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route path="/category/:cat" element={<Carousel />} />
-      <Route path="/america" element={<AmericanFailure />} />
+      <Route path="/democrats" element={<AmericanFailure />} />
     </Routes>
   </div>
 );

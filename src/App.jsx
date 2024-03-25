@@ -27,12 +27,14 @@ export default function Home() {
         <div className="links">
           <Link to="/" state={{ name: "", category: "", categories }}><div className="linksText">Home</div></Link>
           <span className="divider">|</span>
+          <Link to="/democrats"><div className="linksText">Democratic Abandonment</div></Link>
+            <span className="divider">|</span>
         { categories.map((item, i) => {
-          return i < 5 ?
+          return i === 1 || i === 8 || i === 10 ?
           (
           <div className="links" key={ item.name}>
-            <Link to={`/category/${item.subcategories[0].name}`} state={{ name: item.subcategories[0].name, category: item.subcategories[0].category, subcategories: item.subcategories }}><div className="linksText">{ item.subcategories[0].name }</div></Link>
-              { i === 4 ? [] : <span className="divider">|</span> }
+            <Link to={`/category/${item.subcategories[0].name}`} state={{ name: item.subcategories[0].name, category: item.subcategories[0].category, subcategories: item.subcategories }}><div className="linksText">{ item.name }</div></Link>
+              { i === 10 ? [] : <span className="divider">|</span> }
           </div> )
           : []
         })}

@@ -7,7 +7,8 @@ const buttons = [
   { name: "Oct. 7 testmonies", category: "dfi_oct7categories"},
   { name: "International Law Lies", category: "dfi_internationalLawLies"},
   { name: "Death Count Lies", category: "dfi_deathCountLies"},
-  { name: "Other Lies", category: "dfi_otherLies"}
+  { name: "Other Lies", category: "dfi_otherLies"},
+  { name: "Hate and Violence", category: "dfi_hateAndViolence"}
 ]
 
 

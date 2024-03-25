@@ -50,8 +50,15 @@ app.post("/api/tweets_by_category", async (req, res) => {
   const category = req.body.category;
   const skip = req.body.skip;
   
+  let tweets;
+  
 
-  const tweets = await Tweet.find({ category }).sort({ created_at: 1 }).skip(skip).limit(10).lean().exec();
+  if (category === "dfi_hateAndViolence") {
+    tweets = await DfiTweet.find({ category }).sort({ created_at: 1 }).skip(skip).limit(10).lean().exec();    
+  }
+  else {
+    tweets = await Tweet.find({ category }).sort({ created_at: 1 }).skip(skip).limit(10).lean().exec();
+  }
   
   return res.json({ tweets })
 
